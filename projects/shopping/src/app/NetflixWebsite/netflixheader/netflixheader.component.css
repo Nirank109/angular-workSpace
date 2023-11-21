@@ -1,0 +1,10 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.brand{
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+}
