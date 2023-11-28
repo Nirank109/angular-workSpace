@@ -1,0 +1,31 @@
+.odd-style {
+    background-color: aquamarine;
+}
+.even-style {
+    background-color: bisque;
+}
+.last-style{
+    background-color: blue;
+}
+.first-style{
+    background-color: red;
+    color: black;
+}
+/* div{
+    background-color: yellow;
+} */
+
+.border-style{
+    border: 2px solid red;
+}
+.bg-style{
+    background-color: yellow;
+}
+.text-style{
+    color: red;
+    padding: 10px;
+}
+.dark-mode{
+    background-color: black;
+    color: white;
+}

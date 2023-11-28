@@ -1,0 +1,37 @@
+<div class="container-fluid mt-2">
+    <h2>Product Details</h2>
+    <div>
+        <div class="col-3">
+            <h2>Register Product</h2>
+            <dl>
+                <dt>Name</dt>
+                <dd><input type="text" class="form-control" [(ngModel)]=Product.Name ></dd>
+                <dt>Price</dt>
+                <dd><input type="text" class="form-control" [(ngModel)]="Product.Price" ></dd>
+                <dt>Stock</dt>
+                <dd class="form-switch"><input type="checkbox" class="form-check-input" [(ngModel)]="Product.Stock">Available</dd>
+                <dt>City</dt>
+                <dd>
+                    <select class="form-select" [(ngModel)]="Product.City">
+                        <option >select a city</option>
+                        <option>Dehli</option>
+                        <option >HYD</option>
+                    </select>
+                </dd>
+            </dl>
+        </div>
+        <div class="col-9">
+            <h2>Product Details</h2>
+            <dl class="row">
+                <dt class="col-3">Name</dt>
+                <dd class="col-9">{{Product.Name}}</dd>
+                <dt class="col-3">Price</dt>
+                <dd class="col-9">{{Product.Price}}</dd>
+                <dt class="col-3">Stock</dt>
+                <dd class="col-9">{{Product.Stock}}</dd>
+                <dt class="col-3">City</dt>
+                <dd class="col-9">{{Product.City}}</dd>
+            </dl>
+        </div>
+    </div>
+</div>
