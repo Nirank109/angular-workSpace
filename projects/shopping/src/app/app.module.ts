@@ -14,6 +14,10 @@ import { IfDemoComponent } from './components/if-demo/if-demo.component';
 import { FordemoComponent } from './components/fordemo/fordemo.component';
 import { ShoppingcartComponent } from './OnlineShopping/shoppingcart/shoppingcart.component';
 import { ForpropertiesComponent } from './components/forproperties/forproperties/forproperties.component';
+import { NgstyledemoComponent } from './components/ngstyledemo/ngstyledemo.component';
+import { EventdemoComponent } from './components/eventdemo/eventdemo.component';
+import { ParentComponent } from './closure/parent/parent.component';
+import { ChildComponent } from './closure/child/child.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -31,8 +35,12 @@ import { ForpropertiesComponent } from './components/forproperties/forproperties
     IfDemoComponent,
     FordemoComponent,
     ShoppingcartComponent,
-    ForpropertiesComponent
+    ForpropertiesComponent,
+    NgstyledemoComponent,
+    EventdemoComponent,
+    ParentComponent,
+    ChildComponent
   ],
-  bootstrap: [ForpropertiesComponent], // Add your root component here
+  bootstrap: [ParentComponent], // Add your root component here
 })
 export class AppModule {}

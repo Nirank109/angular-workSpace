@@ -1,0 +1,28 @@
+<div class="container-fluid mt-3"> 
+    <button (click)="InsertClicked($event)" id="btnInsert" name="Insert" class="btn btn-primary w-100  ">Insert</button>
+</div>
+
+<div class="container-fluid mt-3" >
+    <h2>User Registrations</h2>
+    <dl>
+        <dt>User Id</dt>
+        <dd><input (blur)="RemoveMesseges()" (keyup)="VerifyUserId($event)" type="text"></dd>
+        <dd  [ngClass]="{'text-success':isValidUser, 'text-danger':isInValidUser}">{{UsersMesseges}}</dd>
+        <dt>Password</dt>
+        <dd><input (keypress)="VerifyCaps($event)" type="password"></dd>
+        <dd *ngIf="showCapsError" class="text-warning">
+            <span class="bi bi-exclamation-triangle-fill text-warning">Caps On </span>
+        </dd>
+
+        <dt>Select City</dt>
+        <dd>
+            <select (change)="VerifyCity($event)" >
+                <option value="-1">Select Your City</option>
+                <option >Mumbai</option>
+                <option >Pune</option>
+            </select>
+        </dd>
+        <dd *ngIf="showCityError" class="text-danger"> Please Select Your City</dd>
+    </dl>
+
+</div>
