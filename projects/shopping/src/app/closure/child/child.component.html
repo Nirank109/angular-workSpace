@@ -1,6 +1,12 @@
 <div class="container-fluid m-2 p-2 bg-light text-dark" style="height: 300px;">
     <h2>Child Component</h2>
     <p>{{MessegeFromParent}}</p>
+    <dl>
+        <dt>Name</dt>
+        <dd>{{ProductDetails.Name}}</dd>
+        <dt>Price</dt>
+        <dd>{{ProductDetails.Price}}</dd>
+    </dl>
 
-    <button (click)="OnButtonClick()" class="btn btn-dark">Messege To Child</button>
+    <button (click)="OnButtonClick()" class="btn btn-dark">Messege To Parent</button>
 </div>

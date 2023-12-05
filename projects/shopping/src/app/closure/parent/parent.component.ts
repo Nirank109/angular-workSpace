@@ -12,12 +12,18 @@ export class ParentComponent  implements OnInit{
   constructor(){}
   ngOnInit() {}
   public MessegeToChild : string='Waiting for Messege.';
+  public ObjectToChild: any = {};
   public MessegeFromChild : string='';
 
   public SendClick(){
     this.MessegeToChild = " Hello ....! Message From Parent";
+    this.ObjectToChild = {
+      Name: 'TV',
+      Price : 45000
+    }
   }
   public GetMessegeFromChild(e:string){
     this.MessegeFromChild=e;
+   
   }
 }

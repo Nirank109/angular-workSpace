@@ -18,6 +18,8 @@ import { NgstyledemoComponent } from './components/ngstyledemo/ngstyledemo.compo
 import { EventdemoComponent } from './components/eventdemo/eventdemo.component';
 import { ParentComponent } from './closure/parent/parent.component';
 import { ChildComponent } from './closure/child/child.component';
+import { ProductsComponent } from './customEvent/products/products.component';
+import { FilterComponent } from './customEvent/filter/filter.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -39,8 +41,10 @@ import { ChildComponent } from './closure/child/child.component';
     NgstyledemoComponent,
     EventdemoComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ProductsComponent,
+    FilterComponent
   ],
-  bootstrap: [ParentComponent], // Add your root component here
+  bootstrap: [ProductsComponent], // Add your root component here
 })
 export class AppModule {}

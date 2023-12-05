@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ChildComponent  implements OnInit{
 
   @Input() public MessegeFromParent : string ='';
+  @Input() public ProductDetails : any ={};
   @Output() public ChildClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor(){}

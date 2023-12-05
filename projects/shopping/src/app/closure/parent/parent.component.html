@@ -1,5 +1,5 @@
 <div class="container-fluid p-2 bg-dark text-white" style="height: 500px;">
     <h2>Parent Component <button (click)="SendClick()" class="btn btn-light">Send Messege to Child </button></h2>
     <p>{{MessegeFromChild}}</p>
-    <app-child (ChildClick)="GetMessegeFromChild($event)" [MessegeFromParent]="MessegeToChild"></app-child>
+    <app-child  (ChildClick)="GetMessegeFromChild($event)" [MessegeFromParent]="MessegeToChild" [ProductDetails]="ObjectToChild"></app-child>
 </div>
