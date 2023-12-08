@@ -1,7 +1,7 @@
 <div class="btn-group-vertical">
-    <button class="btn btn-link w-100">Electronics[{{ElectronicsCount}}]</button>
-    <button class="btn btn-link w-100">Jewellary[{{JewellaryCount}}]</button>
-    <button class="btn btn-link w-100">Men's Clothings[{{MensClothingCount}}]</button>
-    <button class="btn btn-link w-100">Women's Clothings[{{WomensClothingCount}}]</button>
+    <button (click)="ButtonClick($event)" name = "electronics" class="btn btn-link w-100">Electronics[{{ElectronicsCount}}]</button>
+    <button (click)="ButtonClick($event)" name = "jewelery" class="btn btn-link w-100">Jewelery[{{JewelaryCount}}]</button>
+    <button (click)="ButtonClick($event)" name = "men's clothing" class="btn btn-link w-100">men's clothing[{{MensClothingCount}}]</button>
+    <button (click)="ButtonClick($event)" name = "women's clothing" class="btn btn-link w-100">women's clothing[{{WomensClothingCount}}]</button>
 
 </div>

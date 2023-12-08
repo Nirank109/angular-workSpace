@@ -1,6 +1,6 @@
 <div class="container-fluid row ">
     <nav class="col-3">
-       <app-filter [ElectronicsCount] ="ElectronicsCount" [JewellaryCount] ="JewellaryCount" [MensClothingCount] ="MensClothingCount" [WomensClothingCount]="WomensClothingCount"> </app-filter>
+       <app-filter (FilterChanged)="getCategoryName($event)" [ElectronicsCount] ="ElectronicsCount" [JewelaryCount] ="JewellaryCount" [MensClothingCount] ="MensClothingCount" [WomensClothingCount]="WomensClothingCount"> </app-filter>
     </nav>
     <main class="col-9">
         <div class="d-flex flex-wrap overflow-auto" style="height: 500px">
