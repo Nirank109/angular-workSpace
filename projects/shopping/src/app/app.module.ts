@@ -20,10 +20,14 @@ import { ParentComponent } from './closure/parent/parent.component';
 import { ChildComponent } from './closure/child/child.component';
 import { ProductsComponent } from './customEvent/products/products.component';
 import { FilterComponent } from './customEvent/filter/filter.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ServicedemoComponent } from './components/servicedemo/servicedemo.component';
+import { TemplateformComponent } from './components/templateform/templateform.component';
 @NgModule({
   imports: [
     BrowserModule,
-   FormsModule
+   FormsModule,
+   HttpClientModule
   ],
   declarations: [
     HomeComponent,
@@ -43,8 +47,10 @@ import { FilterComponent } from './customEvent/filter/filter.component';
     ParentComponent,
     ChildComponent,
     ProductsComponent,
-    FilterComponent
+    FilterComponent,
+    ServicedemoComponent,
+    TemplateformComponent
   ],
-  bootstrap: [ProductsComponent], // Add your root component here
+  bootstrap: [TemplateformComponent], // Add your root component here
 })
 export class AppModule {}

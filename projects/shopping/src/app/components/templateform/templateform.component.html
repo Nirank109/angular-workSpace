@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <form [ngClass]="{'invalid-style' : frmRegister.invalid, 'valid-style': frmRegister.valid}" #frmRegister ="ngForm" >
+                <h2>Register User</h2>
+                <dl>
+                    <dt>UserName</dt>
+                    <dd><input name = "UserName" required minlength="4" ngModel #UserName = "ngModel" input="text"></dd>
+                    <dd class="text-danger" *ngIf=" UserName.touched &&  UserName.invalid">
+                        <span *ngIf="UserName.errors?.['required']">Name Required</span>
+                        <span *ngIf="UserName.errors?.['minlength']">Name is too short</span>
+                    </dd>
+                    <dt>PassWord</dt>
+                    <dd> <input type="password" required pattern="(?=.*[A-Z])\w{4,10}" name="Password" ngModel #Password = 'ngModel'></dd>
+                    <dd class="text-danger" *ngIf=" Password.touched &&  Password.invalid">
+                        <span *ngIf="Password.errors?.['required']">Password Required</span>
+                        <span *ngIf="Password.errors?.['pattern']">Password is Invalid</span>
+                    </dd>
+                    <dt>Age</dt>    
+                    <dd><input name = "Age" required ngModel #Age = "ngModel" type="text"></dd>
+                    <dt>Mobile</dt>
+                    <dd><input  name = "Mobile" required pattern="\+91\d{10}" ngModel #Mobile = "ngModel" type="text"></dd>
+                </dl>
+                <button [disabled]="frmRegister.invalid">Submit</button>
+            </form>
+        </div>
+        <div class="col-8">
+            <h2>Status</h2>
+            <dl>
+                <dt>Form Data</dt>
+                <dd>{{frmRegister.value | json}}</dd>
+                <dt>Pristine</dt>
+                <dd>{{frmRegister.pristine}}</dd>
+                <dt>Dirty</dt>
+                <dd>{{frmRegister.dirty}}</dd>
+                <dt>Valid</dt>
+                <dd>{{frmRegister.valid}}</dd>
+                <dt>Invalid</dt>
+                <dd>{{frmRegister.invalid}}</dd>
+                <dt>Submitted</dt>
+                <dd>{{frmRegister.submitted}}</dd>
+            </dl>
+        </div>
+
+    </div>
+</div>

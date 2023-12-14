@@ -1,1 +1,13 @@
-<p>register works!</p>
+<div class="container-fluid">
+    <h2>User Registration</h2>
+    <dl>
+        <dt>UserName</dt>
+        <dd><input type="text"></dd>
+        <dt>PassWord</dt>
+        <dd><input type="password"></dd>
+        <dt>Verify Code <button (click)="ChangeCode()" class="btn"> <span  class="bi bi-arrow-clockwise"></span></button></dt>
+        <dd>{{Code}}</dd>
+    </dl>
+    <button>Login</button>
+
+</div>
