@@ -1,6 +1,6 @@
 // app.module.ts
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HomeComponent } from './components/home.component';
 import { LoginComponent } from './components/login/login.componet';
@@ -23,11 +23,13 @@ import { FilterComponent } from './customEvent/filter/filter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicedemoComponent } from './components/servicedemo/servicedemo.component';
 import { TemplateformComponent } from './components/templateform/templateform.component';
+import { ReactivedemoComponent } from './components/reactivedemo/reactivedemo.component';
 @NgModule({
   imports: [
     BrowserModule,
    FormsModule,
-   HttpClientModule
+   HttpClientModule, 
+   ReactiveFormsModule
   ],
   declarations: [
     HomeComponent,
@@ -49,8 +51,9 @@ import { TemplateformComponent } from './components/templateform/templateform.co
     ProductsComponent,
     FilterComponent,
     ServicedemoComponent,
-    TemplateformComponent
+    TemplateformComponent,
+    ReactivedemoComponent
   ],
-  bootstrap: [TemplateformComponent], // Add your root component here
+  bootstrap: [ReactivedemoComponent], // Add your root component here
 })
 export class AppModule {}

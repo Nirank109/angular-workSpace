@@ -25,6 +25,7 @@
               "projects/shopping/src/assets"
             ],
             "styles": [
+              "projects/shopping/src/custom-theme.scss",
               "projects/shopping/src/styles.css"
             ],
             "scripts": [],
@@ -90,6 +91,99 @@
             ],
             "styles": [
               "projects/shopping/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "ishop": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/ishop",
+      "sourceRoot": "projects/ishop/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/ishop",
+            "index": "projects/ishop/src/index.html",
+            "browser": "projects/ishop/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/ishop/tsconfig.app.json",
+            "assets": [
+              "projects/ishop/src/favicon.ico",
+              "projects/ishop/src/assets"
+            ],
+            "styles": [
+              "projects/ishop/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/ishop/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/ishop/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "ishop:build:production"
+            },
+            "development": {
+              "buildTarget": "ishop:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "ishop:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/ishop/tsconfig.spec.json",
+            "assets": [
+              "projects/ishop/src/favicon.ico",
+              "projects/ishop/src/assets"
+            ],
+            "styles": [
+              "projects/ishop/src/styles.css"
             ],
             "scripts": []
           }
